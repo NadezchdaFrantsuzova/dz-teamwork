@@ -39,8 +39,7 @@ public class SaleThreeAsOne extends Shop {
         }
     }
 
-    public static String printBasket(int[] basket, String[] products, int[] prices) {
-        System.out.println("Ваша корзина:");
+    public static void printBasket() {
         StringBuilder s = new StringBuilder();
         for (int i = 0; i < products.length; i++) {
             if (basket[i] == 3) {
@@ -70,10 +69,10 @@ public class SaleThreeAsOne extends Shop {
                 s.append("\n");
             }
         }
-        return textBasket = s.toString();
+        textBasket = s.toString();
     }
 
-    public static void summarizer(int[] basket, String[] products, int[] prices, double[] summary) {
+    public static void summarizer() {
         for (int i = 0; i < products.length; i++) {
             if (basket[i] > 0 && basket[i] <= 2 || basket[i] > 3) {
                 summary[i] = (basket[i] * prices[i]);
@@ -83,10 +82,9 @@ public class SaleThreeAsOne extends Shop {
         }
     }
 
-    public static double totalCount(double[] summary) {
+    public static void totalCount() {
         for (double sum1 : summary) {
             sum += sum1;
         }
-        return sum;
     }
 }
