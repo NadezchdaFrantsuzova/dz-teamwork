@@ -9,7 +9,6 @@ public class SaleThreeAsOne extends Shop {
     public static void shopping() {
         while (true) {
             System.out.println("Список возможных товаров для покупки:");
-            System.out.println("ВНИМАНИЕ! В магазине действует акция 3 по цене 2. Введите промо-код 'Халява' для доступа к акционным товарам!");
             for (int i = 0; i < products.length; i++) {
                 System.out.println((i + 1) + ". " + products[i] + " " + prices[i] + " руб./шт.");
             }
