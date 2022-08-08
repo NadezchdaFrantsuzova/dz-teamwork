@@ -16,15 +16,15 @@ public class Main {
             }
             if ("1".equals(input)) {
                 Shop.shopping();
-                Shop.printBasket(Shop.basket, Shop.products, Shop.prices);
-                Shop.summarizer(Shop.basket, Shop.products, Shop.prices, Shop.summary);
-                Shop.totalCount(Shop.summary);
+                Shop.printBasket();
+                Shop.summarizer();
+                Shop.totalCount();
             }
             if ("Халява".equals(input)) {
                 SaleThreeAsOne.shopping();
-                SaleThreeAsOne.printBasket(SaleThreeAsOne.basket, SaleThreeAsOne.products, SaleThreeAsOne.prices);
-                SaleThreeAsOne.summarizer(SaleThreeAsOne.basket, SaleThreeAsOne.products, SaleThreeAsOne.prices, SaleThreeAsOne.summary);
-                SaleThreeAsOne.totalCount(SaleThreeAsOne.summary);
+                SaleThreeAsOne.printBasket();
+                SaleThreeAsOne.summarizer();
+                SaleThreeAsOne.totalCount();
             }
         }
         System.out.println("Ваша корзина:");

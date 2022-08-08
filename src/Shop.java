@@ -6,7 +6,7 @@ public class Shop {
     public static int[] prices = {50, 80, 60, 10};
     public static int[] basket = new int[products.length];
     public static int[] summary = new int[products.length];
-    public static int sum = 0;
+    public static double sum = 0;
 
     public static String textBasket;
 
@@ -44,9 +44,8 @@ public class Shop {
 
     }
 
-    public static String printBasket(int[] basket, String[] products, int[] prices) {
+    public static void printBasket() {
         StringBuilder s = new StringBuilder();
-        //System.out.println("Ваша корзина:");
         for (int i = 0; i < products.length; i++) {
             if (basket[i] > 0) {
                 s.append(products[i]);
@@ -62,10 +61,10 @@ public class Shop {
                 s.append("\n");
             }
         }
-        return textBasket = s.toString();
+        textBasket = s.toString();
     }
 
-    public static void summarizer(int[] basket, String[] products, int[] prices, int[] summary) {
+    public static void summarizer() {
         for (int i = 0; i < products.length; i++) {
             if (basket[i] > 0) {
                 summary[i] = (basket[i] * prices[i]);
@@ -73,10 +72,9 @@ public class Shop {
         }
     }
 
-    public static int totalCount(int[] summary) {
+    public static void totalCount() {
         for (int sum1 : summary) {
             sum += sum1;
         }
-        return sum;
     }
 }
