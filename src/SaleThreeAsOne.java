@@ -22,16 +22,18 @@ public class SaleThreeAsOne extends Shop {
             if (custChoice.length != 2) {
                 throw new RuntimeException("Пожалуйста, введите только 2 числа: номер продукта по списку и количество!");
             }
+
             try {
                 int productNumber = Integer.parseInt(custChoice[0]) - 1;
                 if ((productNumber + 1) > products.length || (productNumber + 1) < 0) {
                     throw new RuntimeException("Введен некорректный номер товара! Пожалуйста, введите номер из списка.");
                 }
                 int productCount = Integer.parseInt(custChoice[1]);
-                if (productCount < 0) {
-                    throw new RuntimeException("Введено некорректное количество товара! Пожалуйста, укажите количество еще раз.");
+                if (productCount == 0) {
+                    basket[productNumber] = 0;
+                } else {
+                    basket[productNumber] += productCount;
                 }
-                basket[productNumber] += productCount;
             } catch (NumberFormatException error) {
                 System.out.println("Вы ввели название товара! Пожалуйста, введите его номер по списку.");
                 continue;
