@@ -1,10 +1,10 @@
 public class SaleThreeAsOne extends Shop {
-    public static String[] products = {"Сосиски", "Печенье", "Шоколад"};
-    public static int[] prices = {100, 50, 70};
-    public static int[] basket = new int[products.length];
-    public static double[] summary = new double[products.length];
-    public static double sum = 0;
-    public static String textBasket;
+    protected static String[] products = {"Сосиски", "Печенье", "Шоколад"};
+    protected static int[] prices = {100, 50, 70};
+    protected static int[] basket = new int[products.length];
+    protected static double[] summary = new double[products.length];
+    protected static double sum = 0;
+    protected static String textBasket;
 
     public static void shopping() {
         while (true) {

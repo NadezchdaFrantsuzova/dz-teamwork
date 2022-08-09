@@ -1,12 +1,12 @@
 import java.util.Scanner;
 
 public class Shop {
-    public static Scanner scanner = new Scanner(System.in);
-    public static String[] products = {"Хлеб", "Яблоки", "Молоко", "Йогурт"};
-    public static int[] prices = {50, 80, 60, 10};
-    public static int[] basket = new int[products.length];
-    public static int[] summary = new int[products.length];
-    public static double sum = 0;
+    protected static Scanner scanner = new Scanner(System.in);
+    protected static String[] products = {"Хлеб", "Яблоки", "Молоко", "Йогурт"};
+    protected static int[] prices = {50, 80, 60, 10};
+    protected static int[] basket = new int[products.length];
+    protected static int[] summary = new int[products.length];
+    protected static double sum = 0;
 
     public static String textBasket;
 

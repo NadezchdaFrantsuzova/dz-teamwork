@@ -9,12 +9,12 @@ public class Main {
         while (true) {
             System.out.println("ВНИМАНИЕ! В нашем магазине действует акция 3 по цене 2!" +
                     "Введите промо-код 'Халява', чтобы перейти к акционным товарам!");
-            System.out.println("Пожалуйста, введите промо-код или '1', чтобы начать покупки (end - завершить покупки).");
+            System.out.println("Пожалуйста, введите промо-код или 'go', чтобы начать покупки (end - завершить покупки).");
             String input = scanner.nextLine();
             if ("end".equals(input)) {
                 break;
             }
-            if ("1".equals(input)) {
+            if ("go".equals(input)) {
                 Shop.shopping();
                 Shop.printBasket();
                 Shop.summarizer();
